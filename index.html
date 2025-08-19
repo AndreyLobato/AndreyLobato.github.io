@@ -1,11 +1,122 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <title>Minha Página Pessoal</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfólio e página pessoal de Andrey Lobato — projetos, contatos e experiências." />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Andrey Lobato — Página Pessoal</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon simples (opcional): substitua por um arquivo seu depois -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' x='7' font-size='48'%3E👋%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
-    <h1>Olá, sou Andrey!</h1>
-    <p>Bem-vindo ao meu portfólio hospedado no GitHub Pages.</p>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">Seu Nome</a>
+      <nav aria-label="Navegação principal">
+        <ul class="nav">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="container">
+        <h1>Olá, eu sou <span class="accent">Seu Nome</span> 👋</h1>
+        <p class="lead">
+          Analytics Engineer • Python • SQL • Docker • Kubernetes • AWS
+        </p>
+        <div class="actions">
+          <!-- Substitua os href pelos seus links -->
+          <a class="btn primary" href="https://github.com/andreylobato" target="_blank" rel="noopener">Ver GitHub</a>
+          <a class="btn" href="#projetos">Meus projetos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>Sobre mim</h2>
+          <p>
+            Engenheiro de Computação formado pela UERJ, Analytics Engineer na OLX com trajetória iniciada em análise de requisitos e análise de dados.
+            Possuo uma base sólida em matemática, programação, analise de negocio, comunicação, modelagem e nuvem.  
+            Possuo Experiência trabalhando com principalmente Python, SQL, Tableau, Pyspark, Airflow, Docker, Kubernets e AWS.
+            Gosto de criar soluções que transformem e causem impacto real para o negócio. 
+        </p>
+          <ul class="tags">
+            <li>Python</li><li>SQL</li><li>Airflow</li><li>Docker</li><li>Kubernetes</li><li>AWS</li>
+          </ul>
+        </div>
+        <div class="card note">
+          <h3>Em poucas palavras</h3>
+          <p>Dados → Insights → Ação. Gosto de transformar dados brutos em decisões.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="section alt">
+      <div class="container">
+        <h2>Projetos em destaque</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3><a href="https://github.com/seu-usuario/seu-projeto-1" target="_blank" rel="noopener">Seu Projeto 1</a></h3>
+            <p>Descrição curtinha (1–2 linhas) explicando o objetivo e o principal resultado.</p>
+            <ul class="meta">
+              <li>Python</li><li>Pandas</li><li>Parquet</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/seu-usuario/seu-projeto-2" target="_blank" rel="noopener">Seu Projeto 2</a></h3>
+            <p>O que ele faz, problema que resolve e um resultado mensurável, se houver.</p>
+            <ul class="meta">
+              <li>Docker</li><li>Streamlit</li><li>ETL</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/seu-usuario/seu-projeto-3" target="_blank" rel="noopener">Seu Projeto 3</a></h3>
+            <p>Mais um exemplo de projeto legal. Inclua prints no README do repo.</p>
+            <ul class="meta">
+              <li>Kubernetes</li><li>Helm</li><li>AWS</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+      <div class="container">
+        <h2>Contato</h2>
+        <p>Curtiu o que viu? Vamos conversar.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:andreylobato@gmail.com">Enviar e-mail</a>
+          <a class="btn" href="https://www.linkedin.com/in/andreylobato/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Andrey Lobato • Feito com <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+    </div>
+  </footer>
 </body>
 </html>
