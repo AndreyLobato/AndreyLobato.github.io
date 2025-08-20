@@ -90,6 +90,26 @@ body{
   line-height: 1.15;
   letter-spacing: .2px;
 }
+.hero-photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo img{
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform .25s ease;
+}
+
+.hero-photo img:hover{
+  transform: scale(1.05);
+}
+
 .accent{ color: var(--accent); }
 .lead{ color: var(--muted); margin-top: .75rem; font-size: 1.1rem; }
 .actions{ display: flex; gap: .75rem; margin-top: 1.25rem; flex-wrap: wrap; }
@@ -180,22 +200,3 @@ body{
   *{ animation: none !important; transition: none !important; }
 }
 
-.hero-photo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-photo img{
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--border);
-  box-shadow: var(--shadow);
-  transition: transform .25s ease;
-}
-
-.hero-photo img:hover{
-  transform: scale(1.05);
-}
