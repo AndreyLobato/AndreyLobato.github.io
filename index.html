@@ -12,15 +12,6 @@
 
   <!-- Favicon simples (opcional): substitua por um arquivo seu depois -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' x='7' font-size='48'%3E👋%3C/text%3E%3C/svg%3E" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9SN2FT6WDS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-9SN2FT6WDS');
-  </script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -42,25 +33,25 @@
   <main id="conteudo">
     <!-- Hero -->
     <section id="inicio" class="hero">
-    <div class="container grid-2">
+      <div class="container grid-2">
         <!-- Texto -->
         <div>
-        <h1>Olá, eu sou <span class="accent">Andrey Lobato</span> 👋</h1>
-        <p class="lead">
+          <h1>Olá, eu sou <span class="accent">Andrey Lobato</span> 👋</h1>
+          <p class="lead">
             Analytics Engineer • Python • SQL • Docker • Kubernetes • AWS
-        </p>
-        <div class="actions">
+          </p>
+          <div class="actions">
             <a class="btn primary" href="https://github.com/andreylobato" target="_blank" rel="noopener">Ver GitHub</a>
             <a class="btn" href="#projetos">Meus projetos</a>
-        </div>
+          </div>
         </div>
 
         <!-- Foto -->
         <div class="hero-photo">
-        <!-- Coloque sua foto na pasta raiz do site -->
-        <img src="my_photo.jpeg" alt="Foto de Andrey" />
+          <!-- Coloque sua foto na pasta raiz do site -->
+          <img src="my_photo.jpeg" alt="Foto de Andrey" />
         </div>
-    </div>
+      </div>
     </section>
 
     <!-- Sobre -->
@@ -73,7 +64,7 @@
             Possuo uma base sólida em matemática, programação, analise de negocio, comunicação, modelagem e nuvem.  
             Possuo Experiência trabalhando com principalmente Python, SQL, Tableau, Pyspark, Airflow, Docker, Kubernets e AWS.
             Gosto de criar soluções que transformem e causem impacto real para o negócio. 
-        </p>
+          </p>
           <ul class="tags">
             <li>Python</li><li>SQL</li><li>Airflow</li><li>Docker</li><li>Kubernetes</li><li>AWS</li>
           </ul>
@@ -141,5 +132,50 @@
       <p>© 2025 Andrey Lobato • Feito com <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
     </div>
   </footer>
+
+  <!-- Banner de cookies -->
+  <div id="cookie-banner">
+    <p>Este site utiliza cookies para fins de análise estatística de visitas por meio do Google Analytics. Por favor, indique se autoriza a coleta desses dados.</p>
+    <div>
+      <button id="accept-btn">Aceitar</button>
+      <button id="decline-btn">Recusar</button>
+    </div>
+  </div>
+
+  <!-- Script de consentimento -->
+  <script>
+    function loadAnalytics() {
+      var script = document.createElement("script");
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-9SN2FT6WDS";
+      script.async = true;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9SN2FT6WDS');
+    }
+
+    const banner = document.getElementById("cookie-banner");
+    const consent = localStorage.getItem("cookies_consent");
+
+    if (consent === "accepted") {
+      loadAnalytics();
+      banner.style.display = "none";
+    } else if (consent === "declined") {
+      banner.style.display = "none";
+    }
+
+    document.getElementById("accept-btn").addEventListener("click", function () {
+      localStorage.setItem("cookies_consent", "accepted");
+      loadAnalytics();
+      banner.style.display = "none";
+    });
+
+    document.getElementById("decline-btn").addEventListener("click", function () {
+      localStorage.setItem("cookies_consent", "declined");
+      banner.style.display = "none";
+    });
+  </script>
 </body>
 </html>

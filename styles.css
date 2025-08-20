@@ -200,3 +200,57 @@ body{
   *{ animation: none !important; transition: none !important; }
 }
 
+/* Banner de Cookies */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f2f2f2;  /* Cinza claro */
+  color: #000;          /* Texto preto */
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#cookie-banner p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#cookie-banner div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#cookie-banner button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#accept-btn {
+  background: #d9eafd;  /* Azul claro */
+  color: #000;
+}
+
+#accept-btn:hover {
+  background: #c0ddfa;
+}
+
+#decline-btn {
+  background: #e0e0e0;  /* Cinza */
+  color: #000;
+}
+
+#decline-btn:hover {
+  background: #d5d5d5;
+}
